@@ -1,0 +1,58 @@
+/* Header Styling */
+header {
+  background-color: #333; /* Black background */
+  padding: 1.2rem;
+  z-index: 10;
+}
+
+/* Nav and List Styling */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul li {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+nav ul li a {
+  color: white;
+}
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 700px) {
+  /* Hide navigation items initially */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  /* Show the hamburger menu */
+  .hamburger {
+    display: block;
+  }
+
+  /* Show navigation when active */
+  nav ul.active {
+    display: flex;
+  }
+}
