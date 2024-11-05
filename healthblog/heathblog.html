@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloggit</title>
+
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/utils.css" />
+
+    <link rel="stylesheet" href="../styles/index.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="../favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Bloggit" />
+    <link rel="manifest" href="../site.webmanifest" />
+  </head>
+  <header class="header">
+    <nav>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../techblogs/techblogs.html">Tech blog</a></li>
+        <li><a href="../programmingblogs/programming.html">Programming</a></li>
+        <li><a id="active-page" href="#">Health</a></li>
+        <li><a href="../Foodblogs/foodblog.html">Food</a></li>
+        <li>
+          <a href="../gamingblogs/gamingblog.html">Gaming</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="citename general-border">Bloggit</div>
+
+    <main>
+      <section class="main__section general-border">
+        <figure class="main__figure">
+          <img src="../imgs/js-pic2.jpg" alt="" width="400" />
+          <div class="main__figure-overlay js-main__figure-overlay">
+            <a class="blog-topic-link" href="../starterblog.html"
+              >10 JavaScript Tips and Tricks Every Developer Should Know</a
+            >
+          </div>
+        </figure>
+        <section class="posts-container">
+          <h2>Health Blog Posts</h2>
+          <div class="blog-post-wrapper-card js-blog-post-wrapper-card"></div>
+        </section>
+      </section>
+
+      <section class="general-border">
+        <div class="right-nav">
+          <h2>New Posts</h2>
+          <div class="new-post-cont js-new-post-cont"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-magin-top js-footer"></footer>
+
+    <script type="module" src="../scripts/right-nav.js"></script>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
+
+    <script type="module">
+      import { renderPosts } from "../scripts/index.js";
+      import { healthPostsCardData } from "../scripts/data/healthPostData.js";
+
+      renderPosts(healthPostsCardData);
+    </script>
+  </body>
+</html>
