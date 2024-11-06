@@ -1,12 +1,12 @@
 export const postCardData = [
   {
     id: "1",
-    img: "./imgs/health/health1.jpg",
+    img: "../../imgs/health/health1.jpg",
     description: {
       title: "5 Simple Habits for a Healthier Lifestyle",
       content: `Living a healthier life doesn’t require drastic changes; small adjustments to your daily habits can make a huge difference over time. Here’s a comprehensive look at five practical habits you can incorporate into your routine to enhance your overall health, boost energy, and improve mental clarity.`
     },
-    href: `./healthblog/posts/5-Simple-Habits-for-a-Healthier-Lifestyle.html`
+    href: `../../healthblog/posts/5-Simple-Habits-for-a-Healthier-Lifestyle.html`
   },
 
   {
